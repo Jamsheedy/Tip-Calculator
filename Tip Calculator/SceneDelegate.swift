@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  Tip Calculator
 //
-//  Created by MaKayla Day on 8/19/20.
+//  Created by Daniel Jamsheedy on 8/19/20.
 //  Copyright © 2020 Codepath. All rights reserved.
 //
 

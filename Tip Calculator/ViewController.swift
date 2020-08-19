@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Tip Calculator
 //
-//  Created by MaKayla Day on 8/19/20.
+//  Created by Daniel Jamsheedy on 8/19/20.
 //  Copyright © 2020 Codepath. All rights reserved.
 //
 
@@ -26,19 +26,21 @@ class ViewController: UIViewController {
         view.endEditing(true)
     }
     @IBAction func calculateTip(_ sender: Any) {
+        // corresponding choices to segmented control
+        let percentages = [0.15, 0.18, 0.2]
+        
+        // set bill to current value, or zero
         let bill = Double(billField.text!) ?? 0
         
-        let percentages = [0.15, 0.18, 0.2]
+        // calculate tip using bill and current index for segmented control
         let tip = bill * percentages[tipControl.selectedSegmentIndex]
         
+        // calculate total
         let total = bill + tip
         
+        //set labels using format string with generated values
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
-        
-        
-        
     }
-    
 }
 
